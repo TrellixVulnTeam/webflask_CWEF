@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/dansachhanghoa.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <head>
+        <!-- <div id="header"></div> -->
+        {% include '/menu.html' %}
+    </head>
+    <div id="form">
+        <h1>DANH SÁCH HÀNG HÓA</h1>
+        <table>
+            <tr>
+                <th>stt</th>
+                <th>Hàng hóa</th>
+                <th>Mã Hàng hóa</th>
+                <th>Đơn giá</th> 
+                <th>Mã Loại Hàng Hóa</th>
+            </tr>
+            {% for product in products_list %}
+            <tr>
+                <td> {{ product["id"] }} </td>
+                <td class="hanghoa"> {{ product["ten"] }} </td>
+                <td> {{ product["product_code"] }} </td>
+                <td> {{ product["giaban"] }} </td>
+                <td> {{ product["category_id"] }} </td>
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/createinvoice.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.26/jquery.autocomplete.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body>
+        <head>
+            <div>
+                {% include '/menu.html' %}
+            </div>
+        </head>
+        
+        <form action="/createbuyer" method="POST">
+            <h2>CREATE BUYER</h2>
+        
+            <div class="input-group">
+                <input type="text" id="phone" value="" name="phone" required>
+                <label for="phone">phone</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="name" value="" name="name" required>
+                <label for="phone">Name</label>
+            </div>
+            
+            <button type="submit">Create</button>
+            
+        </form>
+
+        <div id="form-right">
+            <h1>DANH SÁCH KHÁCH HÀNG</h1>
+            <dev id="info-invoice">
+                <p style="color:red;"> <b> {{ Note }} </b> </p>
+            </dev>
+            
+            <table>
+                <tr>
+                    <th>stt</th>
+                    <th>phone</th> 
+                    <th>Name</th> 
+                    <th>Date Create</th>
+                </tr>
+                {% for lines in readListUserBuyer %}
+                <tr>
+                    <td> {{ lines["id"] }} </td>
+                    <td> {{ lines["phone"] }} </td>
+                    <td class="hanghoa"> {{ lines["account_name"] }} </td>
+                    <td> {{ lines["create_date"] }} </td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+            <dev id="total-invoice">
+                <p></p>
+            </dev>
+
+            <!-- <button type="submit">Create</button> -->
+
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>
+
+
+<script>
+    $('#hanghoa').autocomplete({
+        serviceUrl: '/search/hanghoa',
+        dataType: 'json',
+        onSearchComplete: function (query, suggestions) {
+            console.log(query);
+    });
+    
+    $('#autocomplete2').autocomplete({
+        serviceUrl: '/search/songs',
+        dataType: 'json',
+        onSearchComplete: function (query, suggestions) {
+            console.log(query);
+        }
+    });
+</script>

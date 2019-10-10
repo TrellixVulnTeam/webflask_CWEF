@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/danhsachloaihanghoa.css">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <div>
+            {% include '/menu.html' %}
+        </div>
+    </head>
+    <div id="form">
+        <h1>DANH SÁCH LOẠI HÀNG HÓA</h1>
+        <table>
+            <tr>
+                <th>stt</th>
+                <th >Loại hàng hóa</th>
+                <th >Mã Loại hàng hóa</th>
+            </tr>
+            {% for category in category_list %}
+            <tr>
+                <td> {{ category["id"] }} </td>
+                <td class="hanghoa"> {{ category["category_name"] }} </td>
+                <td> {{ category["category_code"] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+</html>

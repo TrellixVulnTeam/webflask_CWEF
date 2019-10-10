@@ -1,0 +1,1 @@
+{"sohoadon": "IN018", "phone": "0974412556", "ngayhoadon": "10/10/2019, 12:35:15", "nguoimua": "Hoang Dinh Khien", "tongtientruocthue": 9000, "thue": 0.1, "tongtien": 3300.0, "danhsachhanghoa": [{"stt": "1", "ten": "Coca Cola", "soluong": "1", "dongia": 3000, "thanhtien": 3000}, {"stt": 2, "ten": "Coca Cola", "soluong": "2", "dongia": 3000, "thanhtien": 6000}]}

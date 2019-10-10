@@ -1,0 +1,57 @@
+:root {
+    --red: #ee596f;
+    --yellow: #feb800;
+    --green: #07a787;
+    --purple: #c765d0;
+    --gray: #787878;
+    --gray-light: #eee;
+    --gray-dark: #2e3c54;
+    --font: "Montserrat", sans-serif;
+}
+
+
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#form {
+    height: auto;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    line-height: 4;
+}
+
+
+table {
+    width: 80%;
+    margin-left:10%; 
+    margin-right:10%;
+}
+  
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    padding: 8px;
+}
+  
+table tr {
+    text-align: center;
+}
+  
+.hanghoa {
+    text-align: left;
+    padding-left: 6%;
+}
+  
+#total-invoice {
+    padding: 10px;
+    text-align: right;
+}
+  

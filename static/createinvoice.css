@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap");
+:root {
+  --red: #ee596f;
+  --yellow: #feb800;
+  --green: #07a787;
+  --purple: #c765d0;
+  --gray: #787878;
+  --gray-light: #eee;
+  --gray-dark: #2e3c54;
+  --font: "Montserrat", sans-serif;
+}
+
+
+body {
+  background-color: #f5f5f5;
+  font-family: var(--font);
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.input-group {
+  /* background-color:  tomato; */
+  margin: 2rem auto;
+  position: relative;
+}
+
+form {
+  background-color: white;
+  font-family: var(--font);
+  height: 80%;
+  width: 18%;
+  margin-left:2%; 
+  margin-right:2%;
+  margin-top: 2%;
+  padding: 2rem 2rem;
+  box-shadow: .2px 2px 12px rgba(0, 0, 0, .2);
+  float: left;
+}
+
+#form-right {
+    background-color: white;
+    height: 80%;
+    width: 60%;
+    margin-right:5%;
+    margin-top: 2%;
+    padding: 2rem 4rem;
+    box-shadow: .2px 2px 12px rgba(0, 0, 0, .2);
+    float: right;
+}
+form h2 {
+  text-align:  center;
+  font-weight:  600;
+  user-select: none;
+  font-size: 30px;
+  color: rgb(2, 99, 79);
+  margin: 0px auto;
+}
+
+form input {
+  display: block;
+  margin: 15px auto;
+  border: none;
+  border-bottom:  1.2px solid var(--green);
+  outline: none;
+  padding:  8px 0px;
+  width: 250px;
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+form label {
+  position: absolute;
+  left: 45px;
+  top: 4px;
+  font-weight: 100;
+  font-size: 12 px;
+  pointer-events: none;
+  color: gray;
+  transition: 200ms ease;
+}
+
+input:focus + label, input:valid + label {
+  top: -14px;
+  left: 40px;
+  font-size: 13px;
+  color: var(--green);
+}
+
+form button {
+  background-color: #07a787;
+  padding: .5rem 1rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  width: 100%;
+  cursor: pointer;
+  transition: 500ms;
+  box-shadow: .2 2px 12px rgba(0, 0, 0, .3);
+}
+
+#form-right button {
+  background-color: #07a787;
+  padding: .5rem 8rem;
+  border: none;
+  color: white;
+  margin-left: 35%;
+  margin-right:20%;
+  margin-top: 3%;
+  width: auto;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 500ms;
+  box-shadow: .2 2px 12px rgba(0, 0, 0, .3);
+  float: center;
+}
+
+button:hover {
+  background-color: rgb(6, 138, 111);
+}
+
+.forgot-pass {
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.forgot-pass a {
+  text-decoration: none;
+  color: black;
+}
+
+
+h1 {
+  text-align: center;
+  line-height: 4;
+}
+
+#info-invoice {
+  padding: 10rem 2rem;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+table tr {
+  text-align: center;
+}
+
+.hanghoa {
+  text-align: left;
+  padding-left: 6%;
+}
+
+#total-invoice {
+  padding: 10px;
+  text-align: right;
+}

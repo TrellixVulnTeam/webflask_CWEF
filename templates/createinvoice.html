@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/createinvoice.css">
+    </head>
+    <body>
+        <head>
+            <div>
+                {% include '/menu.html' %}
+            </div>
+        </head>
+        
+        <form action="/createinvoice" method="POST">
+            <h2>NHẬP SỐ ĐIỆN THOẠI</h2>
+
+            <div class="input-group">
+                <input type="text" id="phone" value="" name="phone" required>
+                <label for="phone">phone</label>
+            </div>
+
+            <!-- <h2>Nhập Hàng Hóa</h2>
+
+            <div class="input-group">
+                <input type="text" id="hanghoa" value="" name="hanghoa" required>
+                <label for="hanghoa">Nhập hàng hóa</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="soluong" value="" name="soluong" required>
+                <label for="soluong">Số lượng</label>
+            </div> -->
+            
+            <button type="submit">Check</button>
+            
+        </form>
+
+        <div id="form-right">
+            <h1>INVOICE</h1>
+            <dev id="info-invoice">
+                <p>Số hóa đơn: {{ new_id }} </p>
+                <p >Người mua hàng:  {{ phone }}</p>
+            </dev>
+    
+            <table>
+                <tr>
+                    <th>stt</th>
+                    <th>Hàng hóa</th> 
+                    <th>Đơn giá</th> 
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                
+                <tr>
+                    <td>a</td>
+                    <td class="hanghoa">a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+
+            </table>
+            
+            <dev id="total-invoice">
+                <p>Tổng thanh toán: a</p>
+                <p>Thuế VAT (10%):  a</p>
+                <p>Tổng thanh toán: a</p>
+            </dev>
+
+            <button type="submit">Create</button>
+
+        </div>
+
+        <script src="" async defer></script>
+    </body>
+</html>
